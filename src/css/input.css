@@ -171,7 +171,7 @@ body {
 
 @media (min-width: 1024px) {
     .code_text {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
@@ -180,21 +180,15 @@ body {
 
 .code_desc {
     font-family: JBM3;
-    font-size: 12px;
+    font-size: 14px;
     padding: 2px 4px;
     border-radius: 4px;
     background-color: #272A36;
     color: var(--color-secondary);
 }
 
-@media (min-width: 768px) {
-    .code_desc {
-        font-size: 14px;
-    }
-}
-
 @media (min-width: 1024px) {
     .code_desc {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
