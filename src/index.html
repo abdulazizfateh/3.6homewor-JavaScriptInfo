@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Info</title>
+    <link rel="icon" href="./assets/images/javascript-logo.svg">
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+
+<body>
+    <header class="site_header border-b border-yellow-400 sticky top-0 z-10 bg-bg-primary">
+        <div class="container">
+            <nav class="header_nav min-h-[55px] flex items-center justify-between  md:min-h-[65px]">
+                <div class="header_nav_logo">
+                    <a class="text-yellow-400 font-JBM3 text-[16px] uppercase md:text-[20px]" href="index.html">Java
+                        Script Info</a>
+                </div>
+                <ul class="flex items-center gap-[24px]">
+                    <li><a class="desc cursor-pointer !text-primary" href="#variableNaming">Variable Naming</a></li>
+                    <li><a class="desc cursor-pointer !text-primary" href="#let">let</a></li>
+                    <li><a class="desc cursor-pointer !text-primary" href="#var">var</a></li>
+                    <li><a class="desc cursor-pointer !text-primary" href="#constant">const</a></li>
+                    <li><a class="desc cursor-pointer !text-primary" href="#summary">Summary</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="site_main">
+        <section class="section_hero py-[30px] md:py-[40px] lg:py-[50px]">
+            <div class="container">
+                <div class="hero_wrapper">
+                    <div class="hero_title_wrapper">
+                        <h1 class="hero_title title_big text-start mb-[8px] lg:mb-[10px]">An Introduction to JavaScript
+                        </h1>
+                        <p class="desc text-start mb-[30px] lg:mb-[40px]">Let’s see what’s so special about JavaScript,
+                            what
+                            we can achieve with it, and what other technologies play well with it.</p>
+                        <h2 class="title mb-[4px] lg:mb-[6px]">What is JavaScript?</h2>
+                        <p class="desc"><span class="italic">JavaScript</span> was initially created to “make web pages
+                            alive”. <br> <br>
+
+                            The programs in this language are called scripts. They can be written right in a web page’s
+                            HTML
+                            and run automatically as the page loads. <br> <br>
+
+                            Scripts are provided and executed as plain text. They don’t need special preparation or
+                            compilation to run. <br> <br>
+
+                            In this aspect, JavaScript is very different from another language called <span
+                                class="text-blue-400">Java. <br><br></span></p>
+                    </div>
+                    <div class="hero_box box">
+                        <div class="hero_box_title_wrapper flex items-start gap-[8px] md:items-center mb-[11px]">
+                            <img class="w-[20px] lg:w-[24px]" src="./assets/images/info-svgrepo-com.svg"
+                                alt="Info Icon">
+                            <p class="title">Why is it called JavaScript?</p>
+                        </div>
+                        <p class="desc mb-[11px]"> When JavaScript was created, it initially had another name:
+                            “LiveScript”. But
+                            Java was very popular at that time, so it was decided that positioning a new language as a
+                            “younger brother” of Java would help.</p>
+                        <p class="desc">But as it evolved, JavaScript became a fully independent language with its own
+                            specification called <span class="text-blue-400">ECMAScript</span>, and now it has no
+                            relation to Java at all.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="variableNaming" class="section_variable_naming">
+            <div class="container">
+                <div class="variable_naming_wrapper">
+                    <p class="title mb-[9px]">Variable naming</p>
+                    <p class="desc mb-[9px]">There are two limitations on variable names in JavaScript:</p>
+                    <p class="desc">1. The name must contain only letters, digits, or the symbols <span
+                            class="code_desc">$</span> and <span class="code_desc">_</span>.</p>
+                    <p class="desc mb-[18px]">2. The first character must not be a digit.</p>
+                    <p class="desc mb-[18px]">Examples of valid names:</p>
+                    <div class="code mb-[18px]">
+                        <p class="code_text"><span>1</span> <span class="text-pink">let</span> userName;</p>
+                        <p class="code_text"><span>2</span> <span class="text-pink">let</span> test123;</p>
+                    </div>
+                    <p class="desc mb-[9px]">When the name contains multiple words, <span
+                            class="text-blue-400">camelCase</span> is commonly used. That is: words go one after
+                        another, each word except first starting with a capital letter: <span
+                            class="code_desc">myVeryLongName</span>.</p>
+                    <p class="desc mb-[9px]">What’s interesting – the dollar sign <span class="code_desc">'$'</span> and
+                        the underscore <span class="code_desc">'_'</span> can also be used in names. They are regular
+                        symbols, just like letters, without any special meaning.
+                    </p>
+                    <p class="desc mb-[18px]">These names are valid:</p>
+                    <div class="code mb-[18px]">
+                        <p class="code_text"><span>1</span> <span class="text-pink">let</span> $ <span
+                                class="text-pink">=</span> <span class="text-purple">1</span>; <span
+                                class="text-comment">// declared a variable with the name "$"</span></p>
+                        <p class="code_text"><span>2</span> <span class="text-pink">let</span> _ <span
+                                class="text-pink">=</span> <span class="text-purple">2</span>; <span
+                                class="text-comment">// and now a variable with the name "_"</span></p>
+                        <p class="code_text">3</p>
+                        <p class="code_text"><span>4</span> <span class="text-zeal">alert</span>($ <span
+                                class="text-pink">+</span> _); <span class="text-comment">// 3</span></p>
+                    </div>
+                    <p class="desc mb-[18px]">Examples of incorrect variable names:</p>
+                    <div class="code mb-[24px]">
+                        <p class="code_text"><span>1</span> <span class="text-pink">let</span> 1a; <span
+                                class="text-comment">// cannot start with a digit</span></p>
+                        <p class="code_text">2</p>
+                        <p class="code_text"><span>3</span> <span class="text-pink">let</span> my<span
+                                class="text-pink">-</span>name; <span class="text-comment">// hyphens '-' aren't allowed
+                                in the name</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="let" class="section_let">
+            <div class="container">
+                <div class="let_wrapper">
+                    <h2 class="let_title title mb-[8px] lg:mb-[12px]">Variables</h2>
+                    <p class="desc mb-[24px]">Most of the time, a JavaScript application needs to work with information.
+                        Here are two examples: <br><br>
+                        1. An online shop – the information might include goods being sold and a shopping cart. <br>
+                        2. A chat application – the information might include users, messages, and much more. <br> <br>
+                        Variables are used to store this information.</p>
+                    <p class="title mb-[6px] lg:mb-[10px]">A variable</p>
+                    <p class="desc mb-[9px]">A <span class="text-blue-400">variable</span> is a “named storage” for
+                        data. We can
+                        use variables to store goodies, visitors, and
+                        other data.</p>
+                    <p class="desc mb-[9px]">To create a variable in JavaScript, use the <span
+                            class="code_desc">let</span> keyword. </p>
+                    <p class="desc mb-[18px]">The statement below creates (in other words: declares) a variable with the
+                        name “message”:</p>
+                    <div class="code mb-[18px]">
+                        <p class="code_text text-white"><span class="text-secondary">1</span> <span
+                                class="text-pink">let</span> message;</p>
+                    </div>
+                    <p class="desc mb-[18px]">Now, we can put some data into it by using the assignment operator <span
+                            class="code_desc">=</span>:</p>
+                    <div class="code mb-[18px]">
+                        <p class="code_text"><span class="text-secondary">1</span> <span class="text-pink">let</span>
+                            message;</p>
+                        <p class="code_text ">2</p>
+                        <p class="code_text"><span class="text-secondary">3</span> message <span
+                                class="text-pink">=</span> <span class="text-yellow">'Hello!'</span>; <span
+                                class="text-comment">// store the string 'Hello' in the variable named message</span>
+                        </p>
+                    </div>
+                    <p class="desc mb-[18px]">The string is now saved into the memory area associated with the variable.
+                        We can access it using the variable name:</p>
+                    <div class="code mb-[18px]">
+                        <p class="code_text"><span class="text-secondary">1</span> <span class="text-pink">let</span>
+                            message;</p>
+                        <p class="code_text"><span class="text-secondary">2</span> message <span
+                                class="text-pink">=</span> <span class="text-yellow">'Hello!'</span>;</p>
+                        <p class="code_text ">3</p>
+                        <p class="code_text"><span class="text-secondary">4</span> <span
+                                class="text-zeal">alert</span>(message); <span class="text-comment">// shows the
+                                variable content</span></p>
+                    </div>
+                    <p class="desc mb-[18px]">To be concise, we can combine the variable declaration and assignment into
+                        a single line:</p>
+                    <div class="code mb-[18px]">
+                        <p class="code_text"><span class="text-secondary">1</span> <span class="text-pink">let</span>
+                            message <span class="text-pink">=</span> <span class="text-yellow">'Hello'</span> ; <span
+                                class="text-comment">// shows the variable content</span></p>
+                        <p class="code_text ">2</p>
+                        <p class="code_text"><span class="text-secondary">3</span> <span
+                                class="text-zeal">alert</span>(message); <span class="text-comment">// 'Hello'</span>
+                        </p>
+                    </div>
+                    <p class="desc mb-[18px]">We can also declare multiple variables in one line:</p>
+                    <div class="code mb-[18px]">
+                        <p class="code_text"><span class="text-secondary">1</span> <span class="text-pink">let</span>
+                            user <span class="text-pink">=</span> <span class="text-yellow">'John'</span>, age <span
+                                class="text-pink">=</span> <span class="text-purple">25</span>, message <span
+                                class="text-pink">=</span> <span class="text-yellow">'Hello'</span>;</p>
+                    </div>
+                    <p class="desc mb-[10px]">That might seem shorter, but we don’t recommend it. For the sake of better
+                        readability, please use a single line per variable.</p>
+                    <p class="desc mb-[18px]">The multiline variant is a bit longer, but easier to read:</p>
+                    <div class="code mb-[18px]">
+                        <p class="code_text"><span class="text-secondary">1</span> <span class="text-pink">let</span>
+                            user <span class="text-pink">=</span> <span class="text-yellow">John</span>;</p>
+                        <p class="code_text"><span class="text-secondary">2</span> <span class="text-pink">age</span>
+                            age <span class="text-pink">=</span> <span class="text-purple">25</span>;</p>
+                        <p class="code_text"><span class="text-secondary">3</span> <span
+                                class="text-pink">message</span> message <span class="text-pink">=</span> <span
+                                class="text-yellow">'Hello'</span>;</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="var" class="section_var">
+            <div class="container">
+                <div class="var_wrapper">
+                    <p class="desc mb-[14px]">Technically, all these variants do the same thing. So, it’s a matter of
+                        personal taste and aesthetics.</p>
+                    <div class="box mb-[24px]">
+                        <div class="box_top flex items-center gap-[12px] mb-[14px]">
+                            <img class="w-[20px] lg:w-[24px]" src="./assets/images/info-svgrepo-com.svg"
+                                alt="Info Icon">
+                            <p class="desc"><span class="code_desc">var</span> instead of <span
+                                    class="code_desc">let</span></p>
+                        </div>
+                        <p class="desc mb-[18px]">In older scripts, you may also find another keyword: <span
+                                class="code_desc">var</span> instead of <span class="code_desc">let</span>:</p>
+                        <div class="code mb-[18px]">
+                            <p class="code_text"><span>1</span> <span class="text-pink">var</span> message <span
+                                    class="text-pink">=</span> <span class="text-yellow">'Hello'</span>;</p>
+                        </div>
+                        <p class="desc mb-[9px]">The <span class="code_desc">var</span> keyword is almost the same as
+                            <span class="code_desc">let</span>. It also declares a variable but in a slightly different,
+                            “old-school” way.
+                        </p>
+                        <p class="desc">There are subtle differences between <span class="code_desc">let</span> and
+                            <span class="code_desc">var</span>, but they do not matter to us yet. We’ll cover them in
+                            detail in the chapter <span class="text-blue-400">The old "var"</span>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="constant" class="section_constant mb-[36px]">
+            <div class="container">
+                <div class="constant_wrapper">
+                    <p class="title mb-[9px]">Constants</p>
+                    <p class="desc mb-[18px]">To declare a constant (unchanging) variable, use <span
+                            class="code_desc">const</span> instead of <span class="code_desc">let</span>:</p>
+                    <div class="code mb-[18px]">
+                        <p class="code_text"><span>1</span> <span class="text-pink">const</span> myBirthday <span
+                                class="text-pink">=</span> <span class="text-yellow">'18.04.1982'</span>;</p>
+                        <p class="code_text">2</p>
+                        <p class="code_text"><span>3</span> myBirthday <span class="text-pink">=</span> <span
+                                class="text-yellow">'01.01.2001'</span>; <span class="text-comment">// error, can't
+                                reassign the constant!</span></p>
+                    </div>
+                    <p class="desc">When a programmer is sure that a variable will never change, they can declare it
+                        with const to guarantee and communicate that fact to everyone.</p>
+                </div>
+            </div>
+        </section>
+        <section id="summary" class="section_summary">
+            <div class="container">
+                <div class="summary_wrapper">
+                    <p class="title mb-[14px]">Summary</p>
+                    <p class="desc mb-[18px]">We can declare variables to store data by using the <span
+                            class="code_desc">var</span>, <span class="code_desc">let</span>, or <span
+                            class="code_desc">const</span> keywords.</p>
+                    <div class="box mb-[18px]">
+                        <p class="desc"><span class="text-primary title_small">- </span> <span
+                                class="code_desc">let</span> – is a modern variable declaration.</p>
+                        <p class="desc"><span class="text-primary title_small">- </span> <span
+                                class="code_desc">var</span> – is an old-school variable declaration. Normally we don’t
+                            use it at all, but we’ll cover subtle differences from <span class="code_desc">let</span> in
+                            the chapter <span class="text-blue-400">The old "var"</span>, just in case you need them.
+                        </p>
+                        <p class="desc"><span class="text-primary title_small">- </span> <span
+                                class="code_desc">const</span> – is like <span class="code_desc">let</span>, but the
+                            value of the variable can’t be changed.</p>
+                    </div>
+                    <p class="desc mb-[50px] lg:mb-[90px]">Variables should be named in a way that allows us to easily
+                        understand what’s inside them.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
